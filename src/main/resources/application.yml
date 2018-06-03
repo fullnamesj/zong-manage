@@ -1,0 +1,58 @@
+################### spring公用配置,设置环境类型 ###############
+spring:
+  profiles:
+    active:  dev
+  mvc:
+    static-path-pattern: /static/**
+    view:
+      prefix: /view/
+
+
+---
+################### 开发环境 ###############
+spring:
+  profiles: dev
+server:
+  port: 80  #访问端口号
+#自定义配置
+zone:
+  zone-host: 127.0.0.1
+#日志配置
+logging:
+  level.root: info
+  path: f:/opt/logs/
+  file: zone-manage-dev.log
+
+
+---
+################### 测试环境 ###############
+spring:
+  profiles: test
+server:
+  port: 8080  #访问端口号
+#自定义配置
+zone:
+  zone-host: test.zone789.com
+#日志配置
+logging:
+  level.root: info
+  path: f:/opt/logs/
+  file: zone-manage-test.log
+
+
+
+---
+###################  生产环境  ###############
+spring:
+  profiles: product
+server:
+  port: 80  #访问端口号
+#自定义配置
+zone:
+  zone-host: www.zone789.com
+
+#日志配置
+logging:
+  level.root: warn
+  path: f:/opt/logs/
+  file: zone-manage-product.log
