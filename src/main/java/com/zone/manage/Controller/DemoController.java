@@ -21,7 +21,7 @@ public class DemoController {
 
     @RequestMapping(value = "/hello",method = RequestMethod.GET)
     public  String hello(){
-        return "hello.html";
+        return "hello1.html";
     }
 
     /**
