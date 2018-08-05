@@ -20,7 +20,7 @@ zone:
 #日志配置
 logging:
   level.root: info
-  path: f:/opt/logs/
+  path: /opt/logs/
   file: zone-manage-dev.log
 
 
@@ -36,7 +36,7 @@ zone:
 #日志配置
 logging:
   level.root: info
-  path: f:/opt/logs/
+  path: /opt/logs/
   file: zone-manage-test.log
 
 
@@ -54,5 +54,5 @@ zone:
 #日志配置
 logging:
   level.root: warn
-  path: f:/opt/logs/
+  path: /opt/logs/
   file: zone-manage-product.log
